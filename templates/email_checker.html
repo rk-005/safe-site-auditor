@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSite Auditor - Email Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SafeSite Auditor</h1>
+        <p>Your ethical tool for website security checks and phishing email detection.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
+            <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
+            <li><a href="{{ url_for('about_page') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="phishing-checker">
+            <h2>Phishing Email Checker</h2>
+            <div class="input-group">
+                <textarea id="emailContent" placeholder="Paste full email content here (including headers if possible)..." rows="10"></textarea>
+                <button id="checkEmailButton">Check Email</button>
+            </div>
+            <div id="emailLoadingIndicator" class="hidden">Analyzing email...</div>
+            <div id="emailResults" class="results-container">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SafeSite Auditor. Built Ethically.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/email_checker.js') }}"></script>
+</body>
+</html>

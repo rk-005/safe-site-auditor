@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SafeSite Auditor - About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>SafeSite Auditor</h1>
+        <p>Your ethical tool for website security checks and phishing email detection.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
+            <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
+            <li><a href="{{ url_for('about_page') }}">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="about-us">
+            <h2>About SafeSite Auditor</h2>
+            <p>Welcome to SafeSite Auditor, an open-source ethical security tool designed to help you check the safety of websites and analyze suspicious emails.</p>
+            <p>Our mission is to provide easily understandable insights into potential web security vulnerabilities and common phishing indicators, promoting safer online practices.</p>
+            <h3>Our Principles:</h3>
+            <ul>
+                <li><strong>Ethical Auditing:</strong> This tool performs non-intrusive checks. It is strictly for educational and self-auditing purposes. <strong>Never use this tool to scan websites without explicit permission.</strong></li>
+                <li><strong>Privacy Focused:</strong> We do not store any URLs you scan or email content you provide. All analysis is performed on-the-fly and results are displayed client-side.</li>
+                <li><strong>Transparency:</strong> The logic behind our checks is openly discussed to help you understand web security concepts.</li>
+            </ul>
+            <h3>How it Works:</h3>
+            <p><strong>Website Security Scan:</strong> Analyzes web headers, cookie flags, and looks for basic indicators of common vulnerabilities like XSS and SQL Injection without exploiting them. It identifies potential weak points that could be exploited by malicious actors.</p>
+            <p><strong>Phishing Email Checker:</strong> Scans email content for suspicious keywords, malicious-looking links (without visiting them), and other common traits found in phishing attempts. It helps you identify whether an email is likely a scam.</p>
+            <p>SafeSite Auditor is a project built with Python (Flask) for the backend and standard web technologies (HTML, CSS, JavaScript) for the frontend. We welcome contributions and feedback!</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 SafeSite Auditor. Built Ethically.</p>
+    </footer>
+</body>
+</html>
