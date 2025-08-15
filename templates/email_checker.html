@@ -2,48 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SafeSite Auditor - Email Checker</title>
+    <title>SafeSite Auditor - Phishing Email Checker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Link your global stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-   <header class="site-header">
-    <div class="container">
-        <h1>
-            <span class="logo-icon">🔍</span>
-            SafeSite Auditor
-        </h1>
-        <p class="subtitle">Your ethical companion for website security checks & phishing detection</p>
-    </div>
-</header>
-<nav class="main-nav">
-    <div class="container">
-        <ul>
-            <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
-            <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
-            <li><a href="{{ url_for('about_page') }}">About</a></li>
-        </ul>
-    </div>
-</nav>
+    <!-- Header Block -->
+    <header class="site-header">
+        <div class="container">
+            <h1><span class="logo-icon">🔍</span> SafeSite Auditor</h1>
+            <p class="subtitle">Your ethical companion for website security checks & phishing detection</p>
+        </div>
+    </header>
 
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
+                <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
+                <li><a href="{{ url_for('about_page') }}">About</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <main>
+    <!-- Main Content -->
+    <main class="container">
         <section id="phishing-checker">
             <h2>Phishing Email Checker</h2>
             <div class="input-group">
-                <textarea id="emailContent" placeholder="Paste full email content here (including headers if possible)..." rows="10"></textarea>
+                <textarea id="emailContent" placeholder="Paste full email content here (including headers if possible)..."></textarea>
                 <button id="checkEmailButton">Check Email</button>
             </div>
-            <div id="emailLoadingIndicator" class="hidden">Analyzing email...</div>
-            <div id="emailResults" class="results-container">
-                </div>
+            <div id="emailLoadingIndicator" class="loading hidden">Analyzing email...</div>
+            <div id="emailResults" class="results-container"></div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 SafeSite Auditor. Built Ethically.</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 SafeSite Auditor | Built by Rohith</p>
+        </div>
     </footer>
 
+    <!-- JS File for Email Checker -->
     <script src="{{ url_for('static', filename='js/email_checker.js') }}"></script>
 </body>
 </html>
