@@ -7,36 +7,41 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>SafeSite Auditor</h1>
-        <p>Your ethical tool for website security checks and phishing email detection.</p>
+    <header class="site-header">
+        <div class="container">
+            <h1>🔍 SafeSite Auditor</h1>
+            <p>Your ethical companion for website security checks & phishing detection</p>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
-            <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
-            <li><a href="{{ url_for('about_page') }}">About</a></li>
-        </ul>
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
+                <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
+                <li><a href="{{ url_for('about_page') }}">About</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
+    <main class="container">
         <section id="website-scanner">
             <h2>Website Security Scan</h2>
             <div class="input-group">
                 <input type="text" id="websiteUrl" placeholder="Enter website URL (e.g., example.com)">
-                <button id="scanButton">Scan Website</button>
+                <button id="scanButton">🚀 Scan Website</button>
             </div>
-            <div id="loadingIndicator" class="hidden">Scanning... Please wait.</div>
-            <div id="websiteResults" class="results-container">
-                </div>
+            <div id="loadingIndicator" class="loading hidden">🔄 Scanning... Please wait.</div>
+            <div id="websiteResults" class="results-container"></div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy;Built by Rohith.</p>
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2025 SafeSite Auditor | Built by Rohith</p>
+        </div>
     </footer>
-
+    
     <script src="{{ url_for('static', filename='js/website_scanner.js') }}"></script>
 </body>
 </html>
