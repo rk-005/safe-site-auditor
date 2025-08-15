@@ -7,18 +7,25 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <header>
-        <h1>SafeSite Auditor</h1>
-        <p>Your ethical tool for website security checks and phishing email detection.</p>
-    </header>
-
-    <nav>
+   <header class="site-header">
+    <div class="container">
+        <h1>
+            <span class="logo-icon">🔍</span>
+            SafeSite Auditor
+        </h1>
+        <p class="subtitle">Your ethical companion for website security checks & phishing detection</p>
+    </div>
+</header>
+<nav class="main-nav">
+    <div class="container">
         <ul>
             <li><a href="{{ url_for('website_scanner_page') }}">Website Scan</a></li>
             <li><a href="{{ url_for('email_checker_page') }}">Email Checker</a></li>
             <li><a href="{{ url_for('about_page') }}">About</a></li>
         </ul>
-    </nav>
+    </div>
+</nav>
+
 
     <main>
         <section id="phishing-checker">
