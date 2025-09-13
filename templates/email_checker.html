@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <title>SafeSite Auditor - Phishing Email Checker</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Link your global stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Add CSS for the logo container and image */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            height: 40px; /* Adjust size as needed */
+            margin-right: 15px; /* Adjust spacing as needed */
+        }
+    </style>
 </head>
 <body>
-    <!-- Header Block -->
     <header class="site-header">
         <div class="container">
-            <h1><span class="logo-icon">🔍</span> SafeSite Auditor</h1>
+            <div class="logo-container">
+                <img src="static/generated-image (2).png" alt="SafeSite Auditor Logo" class="logo">
+                <h1>SafeSite Auditor</h1>
+            </div>
             <p class="subtitle">Your ethical companion for website security checks & phishing detection</p>
         </div>
     </header>
 
-    <!-- Navigation Bar -->
     <nav class="main-nav">
         <div class="container">
             <ul>
@@ -27,7 +38,6 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="container">
         <section id="phishing-checker">
             <h2>Phishing Email Checker</h2>
@@ -40,14 +50,12 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2025 SafeSite Auditor | Built by Rohith</p>
         </div>
     </footer>
 
-    <!-- JS File for Email Checker -->
     <script src="{{ url_for('static', filename='js/email_checker.js') }}"></script>
 </body>
 </html>
