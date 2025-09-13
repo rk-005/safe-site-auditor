@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeSite Auditor - Website Scan</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Add some basic styling for the logo if needed */
+        .site-header .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .site-header .logo {
+            height: 40px; /* Adjust height as needed */
+            margin-right: 10px; /* Space between logo and text */
+        }
+    </style>
 </head>
 <body>
     <header class="site-header">
         <div class="container">
-            <h1>🔍 SafeSite Auditor</h1>
+            <div class="logo-container">
+                <img src="static/generated-image (2).png" alt="SafeSite Auditor Logo" class="logo">
+                <h1>SafeSite Auditor</h1>
+            </div>
             <p>Your ethical companion for website security checks & phishing detection</p>
         </div>
     </header>
