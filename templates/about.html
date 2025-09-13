@@ -4,22 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SafeSite Auditor - About</title>
-    <!-- Proper Flask style linking -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        /* Basic styling for the logo. You can move this to your main CSS file. */
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        .logo {
+            height: 40px; /* Adjust size as needed */
+            margin-right: 15px; /* Adjust spacing as needed */
+        }
+    </style>
 </head>
 <body>
-    <!-- Unified Header -->
     <header class="site-header">
         <div class="container">
-            <h1>
-                <span class="logo-icon">🔍</span>
-                SafeSite Auditor
-            </h1>
+            <div class="logo-container">
+                <img src="static/generated-image (2).png}" alt="SafeSite Auditor Logo" class="logo">
+                <h1>SafeSite Auditor</h1>
+            </div>
             <p class="subtitle">Your ethical companion for website security checks & phishing detection</p>
         </div>
     </header>
 
-    <!-- Unified Navbar -->
     <nav class="main-nav">
         <div class="container">
             <ul>
@@ -30,7 +38,6 @@
         </div>
     </nav>
 
-    <!-- Page Content -->
     <main class="container">
         <section id="about-us">
             <h2>About SafeSite Auditor</h2>
@@ -51,7 +58,6 @@
         </section>
     </main>
 
-    <!-- Unified Footer -->
     <footer class="site-footer">
         <div class="container">
             <p>&copy; 2025 SafeSite Auditor | Built by Rohith</p>
